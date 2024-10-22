@@ -1,0 +1,69 @@
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Dark overlay for better text visibility
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2; // Place content above the overlay
+  }
+
+  .hero-content {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .lead {
+      font-size: 1.5rem;
+      
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// Add some spacing and transitions for the content sections
+.home {
+  .row {
+    transition: all 0.3s ease;
+  }
+
+  img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .px-md-4 {
+    @media (max-width: 768px) {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}
