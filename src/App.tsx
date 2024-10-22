@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { routes } from './routes';
 import { useRoutes } from 'react-router-dom';
 import './styles/main.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App: React.FC = () => {
   return (

@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+
+.navbar {
+  background-color: white;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+    .taniti-logo {
+      color: $turq;
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  .navbar-collapse {
+    display: flex;
+    align-items: center;
+  }
+
+  .me-auto {
+    display: flex;
+    align-items: center;
+    
+    a {
+      color: $turq;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+
+  .nav-active {
+    color: $dark !important;
+    font-weight: 600;
+  }
+
+  .btn-primary {
+    background-color: $turq;
+    border-color: $turq;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    &:hover {
+      background-color: $dark;
+      border-color: $dark;
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      margin-top: 1rem;
+      flex-direction: column;
+      
+      .me-auto {
+        flex-direction: column;
+        width: 100%;
+        
+        a {
+          margin: 0.5rem 0;
+          justify-content: center;
+        }
+      }
+      
+      .btn {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
