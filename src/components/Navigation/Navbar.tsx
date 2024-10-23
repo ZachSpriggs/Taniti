@@ -14,7 +14,7 @@ const MainNav = () => {
           </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="text-center">
+        <Navbar.Collapse className="text-center">
           <Nav className="me-auto align-items-center">
             <NavLink to="/" className={({ isActive }) => (isActive ? "nav-active": "")}>
               Home
@@ -30,6 +30,12 @@ const MainNav = () => {
             </NavLink>
             <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-active": "")}>
               About
+            </NavLink>
+            <NavLink to="/faq" className={({ isActive }) => (isActive ? "nav-active": "")}>
+              FAQ
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? "nav-active": "")}>
+              Contact Us 
             </NavLink>
           </Nav>
           <Button 
