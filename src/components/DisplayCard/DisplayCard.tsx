@@ -1,13 +1,12 @@
 import { Card } from "react-bootstrap";
-import { DataEntry } from "../../constants/constants";
+import { DataEntry } from "../../constants/dataConstants";
 
 const DisplayCard = ({
   category,
   name,
   description,
   cuisine,
-  atmosphere,
-  specialFeatures,
+  vibe,
   image,
 }: DataEntry) => {
   return (
@@ -22,16 +21,9 @@ const DisplayCard = ({
         <Card.Text>{description}</Card.Text>
       </Card.Body>
       <Card.Footer className="mt-auto">
-        {atmosphere && (
+        {vibe && (
           <Card.Text as="small">
-            <b>Atmposphere:</b> {atmosphere}
-          </Card.Text>
-        )}
-        {specialFeatures && (
-          <Card.Text as="small">
-            <p>
-              <b>Features:</b> {specialFeatures}
-            </p>
+            <b>Atmposphere:</b> {vibe}
           </Card.Text>
         )}
       </Card.Footer>

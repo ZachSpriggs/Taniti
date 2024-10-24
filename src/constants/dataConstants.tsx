@@ -6,10 +6,10 @@ type CuisineCategory =
 type LodgingCategory = 
   | "Hotel"
   | "Hostel"
-  | "Motel"
+  | "Resort"
   | "Cabin" 
   | "Condo"
-  | "Bed and Breakfast";
+  | "Bed & Breakfast";
 
 type EntertainmentCategory = 
   | "Relaxing"
@@ -22,7 +22,7 @@ type EntertainmentCategory =
 type TransportationCategory = 
   | "Bicycle"
   | "Moped"
-  | "Bus"
+  | "Public Bus"
   | "Rental Car"
   | "Private Bus"
   | "Taxi";
@@ -138,10 +138,9 @@ type TransportationCategory =
   export const lodgingData: DataEntry[] = [
     {
       name: "Azure Bay Resort",
-      category: "Four-Star Resort",
+      category: "Resort",
       description:
         "Nestled on the shores of Crystal Cove, Azure Bay Resort offers luxurious accommodations with breathtaking ocean views. Guests can enjoy world-class amenities, including a spa, infinity pool, gourmet restaurants, and private beach access.",
-      specialFeatures: "Spa, Infinity Pool, Gourmet Dining, Private Beach",
       image: "../images/lodging-1.png",
     },
     {
@@ -167,7 +166,7 @@ type TransportationCategory =
     },
     {
       name: "Tropical Haven Villa",
-      category: "Villa",
+      category: "Cabin",
       description:
         "Experience the ultimate in privacy and luxury at Tropical Haven Villa, a secluded retreat surrounded by lush tropical gardens. Guests can relax in their private pool or take a short walk to the beach.",
       image: "../images/lodging-6.png",
@@ -181,21 +180,21 @@ type TransportationCategory =
     },
     {
       name: "EcoWave Lodge",
-      category: "Eco-Lodge",
+      category: "Hotel",
       description:
         "Immerse yourself in nature at EcoWave Lodge, an eco-friendly retreat that offers sustainable accommodations in harmony with the environment. Guests can enjoy guided nature walks, organic meals, and stargazing.",
       image: "../images/lodging-4.png",
     },
     {
       name: "Explorer's Camp",
-      category: "Camp",
+      category: "Cabin",
       description:
         "For those seeking adventure, Explorer's Camp provides rustic yet comfortable accommodations in close proximity to Taniti's best hiking and outdoor activities. It's the perfect base for your island adventures.",
       image: "../images/lodging-8.png",
     },
     {
       name: "Seaside Inn",
-      category: "Inn",
+      category: "Hotel",
       description:
         "Seaside Inn is a charming beachfront property that offers cozy accommodations with stunning ocean views. Guests can relax on the veranda, take a dip in the sea, and enjoy fresh seafood at the inn's restaurant.",
       image: "../images/lodging-7.png",
