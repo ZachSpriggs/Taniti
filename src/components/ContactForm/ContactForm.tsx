@@ -1,13 +1,7 @@
 import { useState } from "react";
 import { Form, Button, Row, Col, Toast } from "react-bootstrap";
 
-const SuccessToast = ({
-  show,
-  onClose,
-}: {
-  show: boolean;
-  onClose: () => void;
-}) => (
+const SuccessToast = ({ show, onClose }: { show: boolean; onClose: () => void }) => (
   <Toast
     onClose={onClose}
     show={show}
@@ -15,18 +9,10 @@ const SuccessToast = ({
     autohide
     className="position-fixed bottom-0 end-0 m-3 bg-success text-white"
   >
-    <Toast.Header className="bg-success text-white">
+    <Toast.Header className="bg-success text-white border-0">
       <strong className="me-auto">Success!</strong>
-      <button
-        type="button"
-        className="btn-close btn-close-white"
-        onClick={onClose}
-        aria-label="Close"
-      />
     </Toast.Header>
-    <Toast.Body>
-      Thank you for contacting us! We'll get back to you soon.
-    </Toast.Body>
+    <Toast.Body>Your message has been sent successfully.</Toast.Body>
   </Toast>
 );
 
@@ -153,18 +139,7 @@ const ContactForm = () => {
           Submit
         </Button>
       </Form>
-      <Toast
-        onClose={() => setShowToast(false)}
-        show={showToast}
-        delay={3000}
-        autohide
-        className="position-fixed bottom-0 end-0 m-3"
-      >
-        <Toast.Header>
-          <strong className="me-auto">Success!</strong>
-        </Toast.Header>
-        <Toast.Body>Your message has been sent successfully.</Toast.Body>
-      </Toast>
+      <SuccessToast show={showToast} onClose={() => setShowToast(false)} />
     </>
   );
 };
