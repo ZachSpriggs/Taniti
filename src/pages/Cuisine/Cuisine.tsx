@@ -1,9 +1,38 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { foodEstablishments } from "../../constants/dataConstants";
+import { useState, useEffect } from "react";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
+import { foodEstablishments, DataEntry } from "../../constants/dataConstants";
 import DisplayCard from "../../components/DisplayCard/DisplayCard";
 import styles from "./Cuisine.module.scss";
 
 const Cuisine = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState<DataEntry[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setData(foodEstablishments);
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error loading data:', error);
+        setIsLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+        <Spinner animation="border" role="status" variant="primary">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <Container className="pb-3">
@@ -24,7 +53,7 @@ const Cuisine = () => {
       </Container>
       <Container className="py-5">
         <Row>
-          {foodEstablishments.map(
+          {data.map(
             (food, idx) =>
               (food.category === "Restaurant" ||
                 food.category === "Casual" ||
@@ -43,6 +72,7 @@ const Cuisine = () => {
           )}
         </Row>
       </Container>
+
       <Container
         className={`d-flex justify-content-center align-items-center ${styles.bgTurq}`}
       >
@@ -50,7 +80,7 @@ const Cuisine = () => {
       </Container>
       <Container className="py-5">
         <Row>
-          {foodEstablishments.map(
+          {data.map(
             (food, idx) =>
               (food.category === "Convenience Store" ||
                 food.category === "Grocery Store" ||

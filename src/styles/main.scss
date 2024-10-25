@@ -18,3 +18,14 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+
+.text-turq {
+  color: $turq;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bg-turq {
+  background-color: $turq;
+  color: black;
+}
