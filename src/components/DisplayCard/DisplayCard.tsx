@@ -14,9 +14,9 @@ const DisplayCard = ({
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title className="mb-1 text-primary">{name}</Card.Title>
-        <Card.Text as="small" className="d-block mb-2 text-muted fw-bold">
+        <Card.Text as="small" className="d-block mb-2 fw-bold">
           {category}
-          {cuisine ? ` // ${cuisine}` : ""}
+          {cuisine ? ` | ${cuisine}` : ""}
         </Card.Text>
         <Card.Text>{description}</Card.Text>
       </Card.Body>

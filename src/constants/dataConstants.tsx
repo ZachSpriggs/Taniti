@@ -1,7 +1,10 @@
 type CuisineCategory =
   | "Restaurant"
   | "Casual"
-  | "Food Cart";
+  | "Food Cart"
+  | "Convenience Store"
+  | "Grocery Store"
+  | "Supermarket";
 
 type LodgingCategory = 
   | "Hotel"
@@ -37,101 +40,126 @@ type TransportationCategory =
     image: string;
   };
 
-  export const cuisineData: DataEntry[] = [
+  export const foodEstablishments: DataEntry[] = [
     {
       category: "Restaurant",
-      name: "Blue Lagoon Bites",
+      name: "Ocean's Pearl",
       cuisine: "Local Fish and Rice",
-      description:
-        "Blue Lagoon Bites offers a front-row seat to the ocean's splendor with a menu rich in local seafood paired with the finest rice on the island. It's a place where every dish is a tribute to Taniti's maritime heritage.",
-      vibe:
-        "Breezy, open-air dining that's perfect for a laid-back meal with a view.",
-      image: "../images/cuisine-1.png",
+      description: "Upscale beachfront dining featuring the day's catch prepared with traditional Tanitian methods. Known for their signature volcano-salt crusted fish and panoramic ocean views.",
+      vibe: "Elegant open-air dining with traditional Tanitian architecture and romantic sunset views.",
+      image: "../images/dining-1.png",
     },
     {
       category: "Restaurant",
-      name: "The Mango Reef",
-      cuisine: "Local Fish and Rice",
-      description:
-        "Nestled by the serene waters of Whispering Palms Beach, Mango Reef offers an authentic Tanitian dining experience. Specializing in freshly caught seafood and traditional rice dishes, each meal is a celebration of local flavors and island heritage.",
-      vibe: "Ocean-view dining with a casual, family-friendly vibe.",
-      image: "../images/cuisine-placeholder.png",
+      name: "Jade Dynasty",
+      cuisine: "Pan-Asian Fusion",
+      description: "Sophisticated Asian fusion restaurant combining traditional recipes with local Tanitian ingredients. Their dragon roll featuring local tuna and mango has won multiple culinary awards.",
+      vibe: "Modern elegant interior with traditional Asian accents and private dining rooms.",
+      image: "../images/dining-2.png",
     },
     {
       category: "Restaurant",
-      name: "4 Palms Bistro",
-      cuisine: "American-Style Meals",
-      description:
-        "Whether you're craving a hearty burger or a classic club sandwich, The Palms Bistro serves up comforting American favorites with a tropical twist. Enjoy your meal in a lively setting that’s perfect for both families and groups.",
-      vibe: "Vibrant and energetic, with live music on weekends.",
-      image: "../images/cuisine-9.png",
+      name: "The Colonial",
+      cuisine: "International Fine Dining",
+      description: "Located in a restored colonial building, offering a blend of European techniques with tropical ingredients. Features an extensive wine cellar and craft cocktail menu.",
+      vibe: "Refined colonial-era atmosphere with white tablecloths and period decorations.",
+      image: "../images/dining-3.png",
     },
     {
       category: "Restaurant",
-      name: "Tide's Table",
-      cuisine: "Local Fish and Rice",
-      description:
-        "Experience the true essence of Taniti at Tide's Table, where every dish is a masterpiece featuring the freshest catch and locally harvested rice. Our menu is a tribute to the island's rich culinary traditions. Try our signature seafood platter for a taste of everything.",
-      vibe:
-        "Elegant dining with breathtaking sea views, perfect for a memorable evening.",
-      image: "../images/cuisine-3.png",
+      name: "Volcanic View",
+      cuisine: "Modern Tanitian",
+      description: "Contemporary take on traditional Tanitian cuisine, offering spectacular views of the island's volcano. Famous for their lava-stone cooking presentations.",
+      vibe: "Contemporary design with floor-to-ceiling windows and dramatic lighting.",
+      image: "../images/dining-4.png",
     },
     {
-      category: "Restaurant",
-      name: "Lone Star Cantina",
-      cuisine: "American-Style Meals",
-      description:
-        "Lone Star Cantina brings the bold flavors of Texas and Mexico to the heart of Taniti. From sizzling fajitas and hearty burritos to our famous Tex-Mex chili, every dish is a fiesta of taste. Dive into our vibrant menu, complemented by a selection of margaritas and craft beers.",
-      vibe: "Lively and colorful, with a festive Tex-Mex vibe.",
-      image: "../images/cuisine-2.png",
+      category: "Casual",
+      name: "Harbor House",
+      cuisine: "Seafood & Sandwiches",
+      description: "Family-friendly spot serving fresh seafood sandwiches and casual fare. Perfect for lunch after morning activities.",
+      vibe: "Relaxed maritime atmosphere with harbor views and outdoor seating.",
+      image: "../images/dining-5.png",
     },
     {
-      category: "Restaurant",
-      name: "Coral Kitchen",
-      cuisine: "Local Fish and Rice",
-      description:
-        "Coral Kitchen celebrates the sea's bounty, serving dishes that fuse traditional techniques with modern flavors. Our specialty lies in creatively pairing locally caught fish with aromatic rice dishes that showcase the best of Taniti's culinary heritage. Don't miss our seafood risotto!",
-      vibe: "Intimate and modern, with a touch of the sea in every detail.",
-      image: "../images/cuisine-5.png",
+      category: "Casual",
+      name: "Surf & Turf Grill",
+      cuisine: "American-Tanitian Fusion",
+      description: "Popular spot combining American classics with local flavors. Known for their teriyaki burger and grilled mahi-mahi sandwich.",
+      vibe: "Surf-themed casual environment with local sports on TV.",
+      image: "../images/dining-6.png",
     },
     {
-      category: "Restaurant",
-      name: "Dragon Orchid",
-      cuisine: "Pan-Asian",
-      description:
-        "Dragon Orchid invites you on a culinary journey through Asia with a diverse menu that spans from the streets of Bangkok to the sushi bars of Tokyo. Each dish is crafted with authentic flavors and innovative presentations.",
-      vibe:
-        "Modern and sophisticated, ideal for a romantic dinner or a special occasion.",
-      image: "../images/cuisine-6.png",
+      category: "Casual",
+      name: "Rainbow Cafe",
+      cuisine: "International Breakfast & Lunch",
+      description: "All-day breakfast spot serving both Western and Tanitian morning favorites. Famous for their tropical fruit pancakes.",
+      vibe: "Bright, cheerful atmosphere with local artwork and beach views.",
+      image: "../images/dining-7.png",
     },
     {
-      category: "Restaurant",
-      name: "Sunset Grill",
-      cuisine: "Local Fish and Rice",
-      description:
-        "As the sun dips below the horizon, there’s no better place to be than Sunset Grill. Enjoy Taniti’s freshest catch of the day, grilled to perfection, alongside a selection of locally sourced rice dishes in a setting that offers stunning sunset views.",
-      vibe:
-        "Relaxed and inviting, with an outdoor seating area for amazing ocean views.",
-      image: "../images/cuisine-7.png",
+      category: "Food Cart",
+      name: "Tiki Tacos",
+      cuisine: "Mexican-Tanitian Fusion",
+      description: "Popular beachside cart serving fusion tacos featuring local fish and tropical salsas. Don't miss their mango habanero sauce.",
+      vibe: "Colorful beach cart with sandy picnic table seating.",
+      image: "../images/dining-8.png",
     },
     {
-      category: "Restaurant",
-      name: "Liberty Diner",
-      cuisine: "American-Style Meals",
-      description:
-        "Step into Liberty Diner for a slice of Americana in the heart of Taniti. From fluffy pancakes to juicy steaks and burgers, our menu offers a comforting taste of home with generous portions and friendly service.",
-      vibe:
-        "Classic diner with a cozy, retro feel. Breakfast served all day long.",
-      image: "../images/cuisine-8.png",
+      category: "Food Cart",
+      name: "Noodle Express",
+      cuisine: "Pan-Asian Street Food",
+      description: "Evening food cart specializing in Asian noodle dishes with local twists. Their coconut curry udon is legendary.",
+      vibe: "Atmospheric night spot with string lights and counter seating.",
+      image: "../images/dining-9.png",
     },
     {
-      category: "Restaurant",
-      name: "Eastern Breeze",
-      cuisine: "Pan-Asian",
-      description:
-        "Eastern Breeze is your gateway to the flavors of the Far East, offering a meticulously curated selection of dishes that highlight the best of Asian culinary traditions. Whether you’re in the mood for spicy curries or delicate dumplings, you’ll find it here.",
-      vibe: "Tranquil and Zen, with private dining options available.",
-      image: "../images/cuisine-4.png",
+      category: "Food Cart",
+      name: "Island Smoothie Station",
+      cuisine: "Healthy Drinks & Snacks",
+      description: "Fresh tropical smoothies and light bites made with local fruits. Perfect for beach refreshments.",
+      vibe: "Bright tropical cart with palm-shaded seating area.",
+      image: "../images/dining-10.png",
+    },
+    {
+      category: "Supermarket",
+      name: "Island Fresh Market",
+      cuisine: "Full Service Grocery",
+      description: "Largest supermarket on Taniti, offering everything from local produce to imported goods. Features an in-house bakery and deli section.",
+      vibe: "Modern, well-lit store with wide aisles and excellent air conditioning.",
+      image: "../images/grocery-1.png",
+    },
+    {
+      category: "Supermarket",
+      name: "Pacific Provisions",
+      cuisine: "Full Service Grocery",
+      description: "Comprehensive supermarket with a focus on local and organic products. Includes a fresh fish counter and imported goods section.",
+      vibe: "Clean and organized with a focus on local products and friendly service.",
+      image: "../images/grocery-2.png",
+    },
+    {
+      category: "Grocery Store",
+      name: "Harbor Market",
+      cuisine: "Basic Groceries",
+      description: "Family-owned grocery store near the harbor specializing in local products and basic necessities. Great for fresh fish and produce.",
+      vibe: "Quaint local shop with personal service and local charm.",
+      image: "../images/grocery-3.png",
+    },
+    {
+      category: "Grocery Store",
+      name: "Village Grocers",
+      cuisine: "Basic Groceries",
+      description: "Neighborhood grocery store offering everyday essentials and local specialties. Known for their fresh bread and local fruit selection.",
+      vibe: "Traditional market atmosphere with friendly local staff.",
+      image: "../images/grocery-4.png",
+    },
+    {
+      category: "Convenience Store",
+      name: "24/7 Paradise Stop",
+      cuisine: "Quick Essentials",
+      description: "Open 24 hours, offering snacks, drinks, basic necessities, and emergency supplies. Popular for late-night needs and quick purchases.",
+      vibe: "Bright and clean with friendly overnight staff and easy parking.",
+      image: "../images/grocery-5.png",
     },
   ];
   
