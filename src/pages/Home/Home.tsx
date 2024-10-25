@@ -5,6 +5,7 @@ import image2 from '../../images/image2.jpg';
 import image3 from '../../images/image3.jpg';
 import image4 from '../../images/image4.jpg';
 import heroImage from '../../images/hero1.jpg';
+import DisplayCard from '../../components/DisplayCard/DisplayCard';
 
 import styles from './Home.module.scss';
 
@@ -28,15 +29,15 @@ const Home = () => {
 
       <Container className="py-5">
         <Row className="align-items-center mb-5">
-          <Col md={6}>
-            <Image src={image1} alt="Feature 1" fluid />
-          </Col>
-          <Col md={6}>
-            <div className="px-md-4">
-              <h2>Discover Paradise</h2>
-              <p>Experience the beauty of our pristine beaches and lush forests.</p>
-            </div>
-          </Col>
+        <DisplayCard
+          name="Explore the island"
+          description="Nestled in the Pacific, Taniti offers a perfect blend of adventure and
+          relaxation across its compact 500 square miles. Our white sandy
+          beaches along Yellow Leaf Bay provide an ideal setting for both
+          sunbathers and water sports enthusiasts, while our active volcano and
+          lush rainforest create unique opportunities for explorers."
+          image={image1}
+        />
         </Row>
 
         <Row className="align-items-center mb-5">

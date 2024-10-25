@@ -1,11 +1,12 @@
 @import "../../styles/variables";
 
 .textTurq {
-  color: $turq;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  color: $turq !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 .bgTurq {
-  background-color: $turq;
+  background-color: $turq !important;
   color: black;
 }
+

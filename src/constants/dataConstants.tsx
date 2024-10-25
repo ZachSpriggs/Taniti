@@ -32,12 +32,12 @@ type TransportationCategory =
 
 
   export type DataEntry = {
-    category: CuisineCategory | LodgingCategory | EntertainmentCategory | TransportationCategory;
-    name: string;
-    description: string;
+    category?: CuisineCategory | LodgingCategory | EntertainmentCategory | TransportationCategory;
+    name?: string;
+    description?: string;
     cuisine?: string;
     vibe?: string;
-    image: string;
+    image?: string;
   };
 
   export const foodEstablishments: DataEntry[] = [
@@ -294,3 +294,13 @@ type TransportationCategory =
       image: "../images/transportation-9.webp",
     },
   ];
+
+export const homeData: DataEntry[] = [
+  {
+    category: "Bicycle",
+    name: "Jungle Rides",
+    description:
+      "Jungle Rides offers mountain bikes and trail bikes for adventurers seeking off-road thrills in Taniti's rainforests. Rent a bike from Jungle Rides and hit the trails for an adrenaline-pumping experience. Quick and easy rentals available.",
+    image: "../images/transportation-9.webp",
+  },
+];
