@@ -22,7 +22,7 @@ type EntertainmentCategory =
   | "Outdoors"
   | "Indoors";
 
-  type TransportationCategory =
+type TransportationCategory =
   | "Bicycle"
   | "Moped"
   | "Public Bus"
@@ -42,6 +42,75 @@ export type DataEntry = {
   vibe?: string;
   image?: string;
 };
+
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
+export const faqEntries: Faq[] = [
+  {
+    question: "What type of power outlets are used in Taniti?",
+    answer:
+      "Taniti uses 120-volt power outlets, the same standard as in the United States, making it convenient for American travelers to use their electronic devices without adapters.",
+  },
+  {
+    question: "What are the alcohol service hours in Taniti?",
+    answer:
+      "Alcohol service and sales are prohibited between midnight and 9:00 a.m. Please plan your evening activities accordingly.",
+  },
+  {
+    question: "What is the legal drinking age in Taniti?",
+    answer:
+      "The legal drinking age in Taniti is 18 years old. However, visitors should be aware that enforcement of this regulation may be lenient.",
+  },
+  {
+    question: "Will I be able to communicate in English while visiting Taniti?",
+    answer:
+      "Many younger Tanitians, especially in tourist areas, speak fluent English. However, in rural areas, English is less common, particularly among older residents. You may want to learn a few basic local phrases for rural exploration.",
+  },
+  {
+    question: "What medical facilities are available on the island?",
+    answer:
+      "Taniti has one hospital with multilingual staff and several medical clinics throughout the island. The hospital is equipped to handle most medical emergencies and routine healthcare needs.",
+  },
+  {
+    question: "How safe is Taniti for tourists?",
+    answer:
+      "Violent crime is very rare on Taniti. However, with increasing tourism, there has been a rise in petty crimes such as pickpocketing. We recommend taking standard precautions to protect your belongings.",
+  },
+  {
+    question:
+      "Should I be aware of any holiday closures when planning my trip?",
+    answer:
+      "Yes, Taniti celebrates numerous national holidays during which many tourist attractions and restaurants close. We strongly recommend checking the holiday calendar when planning your itinerary.",
+  },
+  {
+    question: "What currency is accepted in Taniti?",
+    answer:
+      "The U.S. dollar is the official currency of Taniti. Many businesses also accept euros and yen. Major credit cards are widely accepted, and several banks offer currency exchange services.",
+  },
+  {
+    question: "Are credit cards widely accepted on the island?",
+    answer:
+      "Yes, most businesses accept major credit cards. However, it's recommended to carry some cash, especially when visiting smaller establishments or rural areas.",
+  },
+  {
+    question: "Do I need to bring a power adapter for my electronic devices?",
+    answer:
+      "If you're traveling from the United States, no adapter is needed as Taniti uses the same 120-volt power outlets. Visitors from other countries may need appropriate adapters.",
+  },
+  {
+    question: "Is English widely spoken at medical facilities?",
+    answer:
+      "Yes, the hospital employs many multilingual staff members, making it accessible for English-speaking visitors requiring medical attention.",
+  },
+  {
+    question: "What precautions should tourists take while visiting?",
+    answer:
+      "While Taniti is generally very safe, we recommend being vigilant with personal belongings due to occasional pickpocketing, particularly in tourist areas. Keep valuables secure and be aware of your surroundings.",
+  },
+];
 
 export const foodEstablishments: DataEntry[] = [
   {
@@ -244,14 +313,14 @@ export const lodgingData: DataEntry[] = [
     description:
       "Another of Taniti's quality family-owned hotels, offering comfortable rooms and genuine island hospitality. Our establishment proudly adheres to all local regulations and inspection requirements.",
     image: "/images/lodging9.webp",
-  }
+  },
 ];
 
 export const transportationData: DataEntry[] = [
   {
     category: "Public Bus",
     name: "Taniti City Express",
-    description: 
+    description:
       "The Taniti City Express provides comprehensive public bus service throughout the city from 5 AM to 11 PM daily. Our modern buses connect all major destinations with frequent, reliable service making city exploration convenient and affordable.",
     image: "/images/transport1.webp",
   },
@@ -289,7 +358,7 @@ export const transportationData: DataEntry[] = [
     description:
       "Based in the popular Merriton Landing area, Merriton Mopeds offers an easy way to zip around Taniti City's flat streets. Our mopeds are perfect for quick trips and exploring the easily navigable Merriton Landing district.",
     image: "/images/transport6.webp",
-  }
+  },
 ];
 
 export const entertainmentData: DataEntry[] = [
@@ -355,5 +424,5 @@ export const entertainmentData: DataEntry[] = [
     description:
       "A treasured local institution exploring the rich history and culture of our island. Our museum offers interactive exhibits and expert guides who bring Taniti's fascinating past to life.",
     image: "/images/activity9.webp",
-  }
+  },
 ];

@@ -29,7 +29,7 @@ const Home = () => {
           style={{ marginBottom: "10rem" }}
         >
           <Col md={{ span: 6, order: 1 }}>
-            <Image src="../images/image1.webp" alt="Feature 2" fluid style={{boxShadow: "6px 6px 10px #352f44"}}/>
+            <Image src="../images/image1.webp" className="mb-4" alt="Feature 2" fluid style={{boxShadow: "6px 6px 10px #352f44"}}/>
           </Col>
           <Col md={{ span: 6, order: 2 }}>
             <div className="px-md-4">
@@ -51,7 +51,7 @@ const Home = () => {
           style={{ marginBottom: "10rem" }}
         >
           <Col md={{ span: 6, order: 2 }}>
-            <Image src="../images/image2.webp" alt="Feature 2" fluid style={{boxShadow: "-6px 6px 10px #352f44"}}/>
+            <Image src="../images/image2.webp" className="mb-4" alt="Feature 2" fluid style={{boxShadow: "-6px 6px 10px #352f44"}}/>
           </Col>
           <Col md={{ span: 6, order: 1 }}>
             <div className="px-md-4">
@@ -74,7 +74,7 @@ const Home = () => {
           style={{ marginBottom: "10rem" }}
         >
           <Col md={{ span: 6, order: 2 }}>
-            <Image src="../images/image3.webp" alt="Feature 2" fluid style={{boxShadow: "6px 6px 10px #352f44"}}/>
+            <Image src="../images/image3.webp" className="mb-4" alt="Feature 2" fluid style={{boxShadow: "6px 6px 10px #352f44"}}/>
           </Col>
           <Col md={{ span: 6, order: 2 }}>
             <div className="px-md-4">
@@ -96,7 +96,7 @@ const Home = () => {
           style={{ marginBottom: "10rem" }}
         >
           <Col md={{ span: 6, order: 2 }}>
-            <Image src="../images/image4.webp" alt="Feature 2" fluid style={{boxShadow: "-6px 6px 10px #352f44"}}/>
+            <Image src="../images/image4.webp" className="mb-4" alt="Feature 2" fluid style={{boxShadow: "-6px 6px 10px #352f44"}}/>
           </Col>
           <Col md={{ span: 6, order: 1 }}>
             <div className="px-md-4">
@@ -118,7 +118,7 @@ const Home = () => {
           style={{ marginBottom: "10rem" }}
         >
           <Col md={{ span: 6, order: 2 }}>
-            <Image src={heroImage} alt="Feature 2" fluid style={{boxShadow: "6px 6px 10px #352f44"}} />
+            <Image src={heroImage} alt="Feature 2" className="mb-4" fluid style={{boxShadow: "6px 6px 10px #352f44"}} />
           </Col>
           <Col md={{ span: 6, order: 2 }}>
             <div className="px-md-4">

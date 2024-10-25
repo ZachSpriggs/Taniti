@@ -82,7 +82,7 @@ const DisplayCard = ({
         </Card.Text>
         <Card.Text>{description}</Card.Text>
       </Card.Body>
-      <Card.Footer className={`mt-auto ${styles.bgTurq} bg-turq`}>
+      <Card.Footer className={`mt-auto footerTurq`}>
         {vibe && (
           <Card.Text as="small" className="bold">
             <b>Atmosphere:</b> {vibe}

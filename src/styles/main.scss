@@ -28,4 +28,19 @@ body {
 .bg-turq {
   background-color: $turq;
   color: black;
+  height: 5rem;
+}
+
+.bgTurq {
+  background-color: $turq;
+  min-height:5rem;
+}
+
+.contactBg {
+  background-color: lightgrey;
+}
+
+.footerTurq {
+  background-color: $turq !important;
+  min-height: 5rem;
 }

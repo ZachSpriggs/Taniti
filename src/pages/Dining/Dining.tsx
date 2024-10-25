@@ -2,20 +2,19 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import { foodEstablishments, DataEntry } from "../../constants/dataConstants";
 import DisplayCard from "../../components/DisplayCard/DisplayCard";
-import styles from "./Cuisine.module.scss";
 
-const Cuisine = () => {
+const Dining = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<DataEntry[]>([]);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         setData(foodEstablishments);
         setIsLoading(false);
       } catch (error) {
-        console.error('Error loading data:', error);
+        console.error("Error loading data:", error);
         setIsLoading(false);
       }
     };
@@ -25,7 +24,10 @@ const Cuisine = () => {
 
   if (isLoading) {
     return (
-      <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+      <Container
+        className="d-flex justify-content-center align-items-center"
+        style={{ minHeight: "100vh" }}
+      >
         <Spinner animation="border" role="status" variant="primary">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
@@ -36,18 +38,18 @@ const Cuisine = () => {
   return (
     <Container>
       <Container className="pb-3">
-        <h2>
-          Explore all of the beautiful dining options that Taniti has to offer
-        </h2>
+        <h2>Savor Local and International Flavors in Taniti</h2>
         <p>
-          With 10 restaurants serving a variety of cuisines from local fish and
-          rice dishes, to American-style meals, or pan-asian cuisines, Taniti
-          has you covered for all of your dining needs.
+          Discover our island's diverse dining scene featuring 10 unique
+          restaurants. Choose from five locations serving fresh local fish and
+          traditional rice dishes, three restaurants offering American-style
+          favorites, or explore two Pan-Asian establishments bringing
+          international flavors to our shores.
         </p>
       </Container>
 
       <Container
-        className={`d-flex justify-content-center align-items-center ${styles.bgTurq}`}
+        className={`d-flex justify-content-center align-items-center bgTurq`}
       >
         <h2 className="text-light">Dining</h2>
       </Container>
@@ -74,7 +76,7 @@ const Cuisine = () => {
       </Container>
 
       <Container
-        className={`d-flex justify-content-center align-items-center ${styles.bgTurq}`}
+        className={`d-flex justify-content-center align-items-center bgTurq`}
       >
         <h2 className="text-light">Shopping</h2>
       </Container>
@@ -103,4 +105,4 @@ const Cuisine = () => {
   );
 };
 
-export default Cuisine;
+export default Dining;

@@ -13,10 +13,10 @@ const Footer = () => {
           <Col xs={12} md={3} className="d-flex flex-column">
             <div className="d-flex flex-column">
               <p className="fw-bold mb-1">Explore Taniti</p>
-              <NavLink to="/dining">Cuisine</NavLink>
-              <NavLink to="/lodging">Lodging</NavLink>
+              <NavLink to="/dining">Dining</NavLink>
               <NavLink to="/entertainment">Entertainment</NavLink>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/lodging">Lodging</NavLink>
+              <NavLink to="/transportation">Transportation</NavLink>
             </div>
           </Col>
           <Col xs={12} md={3} className="d-flex flex-column">
@@ -26,17 +26,18 @@ const Footer = () => {
               Contact Us
             </NavLink>
           </Col>
-          <Col xs={12} md={3} className="d-flex flex-column">
+          <Col xs={12} md={4} className="d-flex flex-column">
             <strong>
               &copy; {currYear} - Taniti | Welcome to Paradise
               <hr/>
             </strong>
             <strong>
-              <a href="https://www.linkedin.com/in/ZachSpriggs/">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ZachSpriggs/">
                 Zach Spriggs
                 {' | '} 
                 <small>Typescript, React, SCSS, Bootstrap</small>
               </a>
+              <p><small>All images were downloaded from Unsplash for free</small></p>
             </strong>
           </Col>
         </Row>

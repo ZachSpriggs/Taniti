@@ -1,6 +1,6 @@
 import RootLayout from '../layouts/RootLayout';
 import Home from '../pages/Home/Home';
-import Cuisine from '../pages/Cuisine/Cuisine';
+import Dining from '../pages/Dining/Dining';
 import Lodging from '../pages/Lodging/Lodging';
 import Entertainment from '../pages/Entertainment/Entertainment';
 import FAQ from '../pages/FAQ/FAQ';
@@ -13,7 +13,7 @@ export const routes = [
     element: <RootLayout />,
     children: [
       { path: "/", element: <Home />, index: true },
-      { path: "/dining", element: <Cuisine /> },
+      { path: "/dining", element: <Dining /> },
       { path: "/lodging", element: <Lodging /> },
       { path: "/entertainment", element: <Entertainment /> },
       { path: "/transportation", element: <Transportation /> },
