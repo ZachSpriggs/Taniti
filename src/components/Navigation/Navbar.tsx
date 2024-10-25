@@ -28,8 +28,8 @@ const MainNav = () => {
             <NavLink to="/lodging" className={({ isActive }) => (isActive ? "nav-active": "")}>
               Lodging
             </NavLink>
-            <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-active": "")}>
-              About
+            <NavLink to="/transportation" className={({ isActive }) => (isActive ? "nav-active": "")}>
+              Transportation
             </NavLink>
             <NavLink to="/faq" className={({ isActive }) => (isActive ? "nav-active": "")}>
               FAQ

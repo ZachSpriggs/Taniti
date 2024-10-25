@@ -29,7 +29,6 @@
   .container {
     position: relative;
     z-index: 2; 
-  
   }
 
   .heroContent {
@@ -59,10 +58,18 @@
   }
 }
 
-// Add some spacing and transitions for the content sections
 .home {
   .row {
     transition: all 0.3s ease;
+  }
+
+  .turq {
+    color: $turq;
+  }
+
+  p {
+    font-size: 14pt;
+    font-weight: 500;
   }
 
   img {
@@ -72,6 +79,8 @@
 
   h2 {
     margin-bottom: 1rem;
+    color: $turq;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .px-md-4 {
