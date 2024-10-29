@@ -41,7 +41,7 @@ const MainNav = () => {
           <Button 
           variant="btn btn-primary"
           className="mb-3"
-          href="https:/www.tripadvisor.com"
+          href="https://www.tripadvisor.com"
           target="_blank"
           rel="noreferrer noopener"
           >
